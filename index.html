@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="css/style.css">
+		<script type="text/javascript" src="js/jq.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<title>Ferma - магазин носков</title>
+	</head>
+	<body>
+	
+	<div id="popupBack"></div>
+	<div id="popupBody">
+		<div id="popupImage"><img src="" /></div>
+		<div id="popupInfo">
+			<div id="popupInfoName"></div>
+			<div id="popupInfoDescription"></div>
+		<div class="display">
+			<div id="popupInfoPrice"></div>
+			<div id="popupInfoKK"></div>
+		</div>
+			<a href="#3" class="head2-button"  style="width: 200px; text-align: center; margin: 50px auto 0 auto;">СДЕЛАТЬ ЗАКАЗ</a>
+		</div>
+	</div>
+	
+		<div class="header">
+			<div class="container">
+				<div class="head1">
+				<div class="header-logo">
+						<a href="index.html"><img class="logo-img" src="image/logo.png" alt=""></a>
+						<a class="title" href="index.html">Ферма носков</a>
+					</div>
+							
+					<div class="nav">
+						<a class="nav-item" href="#1">О компании</a>
+						<a class="nav-item" href="#2">Продукция</a>
+						<a class="nav-item" href="#3">Онлайн-заказ</a>
+						<a class="nav-item" href="#4">Доставка</a>
+						<a class="nav-item" href="#5">Отзывы</a>
+						<a class="nav-item" href="#6">Контакты</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="head2">
+			<img class="head2-img" src="image/6.jpg" alt="">
+			<div class="head-cont">
+				<img class="head2-img2" src="image/icon/cake.png" alt="">
+				<div class="head2-text">Мы найдем пару твоим носкам!</div>
+			</div>
+		</div>
+		
+		<div id="1" class="about-us">
+			<div class="container">
+				<div class="title-b">О компании</div>	
+					<div class="wrapper">
+						<input type="radio" name="point" id="slide1" checked>
+						<input type="radio" name="point" id="slide2">
+						<input type="radio" name="point" id="slide3">
+						<input type="radio" name="point" id="slide4">
+						<input type="radio" name="point" id="slide5">
+						<div class="slider">
+							<div class="slides slide1"></div>
+							<div class="slides slide2"></div>
+							<div class="slides slide3"></div>
+							<div class="slides slide4"></div>
+							<div class="slides slide5"></div>
+						</div>	
+						<div class="controls">
+							<label for="slide1"></label>
+							<label for="slide2"></label>
+							<label for="slide3"></label>
+							<label for="slide4"></label>
+							<label for="slide5"></label>
+						</div>
+					</div>
+			</div>
+		</div>
+		
+		<div id="2" class="product">
+			<div class="title-b">Продукция</div>
+		
+		<table>
+			<tr>
+				<td>
+					<img onClick="openItem(1);" class="product-img" src="image/tovar/1.jpg" alt="">
+					<div onClick="openItem(1);" class="men-square1">от 2000 &#8381;</div>
+					<div onClick="openItem(1);" class="men-square2">Чулки</div>
+				</td>			
+				<td>
+					<img onClick="openItem(2);" class="product-img" src="image/tovar/2.jpg" alt="">
+					<div onClick="openItem(2);" class="men-square1">от 700 &#8381;</div>
+					<div onClick="openItem(2);" class="men-square2">Высокие</div>
+				</td>
+				
+				<td>
+					<img onClick="openItem(3);" class="product-img" src="image/tovar/3.jpg" alt="">
+					<div onClick="openItem(3);" class="men-square1">от 500 &#8381;</div>
+					<div onClick="openItem(3);" class="men-square2">Тонкие</div>
+				</td>
+			</tr>		
+			<tr>
+				<td>
+					<img onClick="openItem(4);" class="product-img" src="image/tovar/4.jpg" alt="">
+					<div onClick="openItem(4);" class="men-square1">от 1500 &#8381;</div>
+					<div onClick="openItem(4);" class="men-square2">Гольфы</div>
+				</td>
+				
+				<td>
+					<img onClick="openItem(5);" class="product-img" src="image/tovar/5.jpg" alt="">
+					<div onClick="openItem(5);" class="men-square1">от 50 000 &#8381;</div>
+					<div onClick="openItem(5);" class="men-square2">Шерстяные</div>
+				</td>
+				
+				<td>
+					<img onClick="openItem(6);" class="product-img" src="image/tovar/6.jpg" alt="">
+					<div onClick="openItem(6);" class="men-square1">от 700 &#8381;</div>
+					<div onClick="openItem(6);" class="men-square2">Детские</div>
+				</td>
+			</tr>
+		</table>
+		</div>
+		
+		<div id="3" class="form">
+			<div class="title-b">Онлайн-заказ</div>
+			<div class="on-box">
+				<form name="Forma" action="javascript: result: false;" method="post">
+					<input class="input" type="text" name="fullname" id="add_order_fullname" maxlength="50" placeholder="Фамилия Имя Отчество"><br>
+					<input class="input" type="text" name="email" id="add_order_email" maxlength="25" placeholder="Ваш Email"><br>
+					<input class="input2" type="text" maxlength="19" id="add_order_phone" name="phone" placeholder="Телефон">
+					<select value="Срочно" id="add_order_delivery" onchange="$(this).attr('value', value);" class="select" name="delivery">
+						<option value="Срочно" selected>Срочная</option>
+						<option value="Завтра">Завтра</option>
+						<option value="Не срочно">Не срочно</option>
+					</select>
+					<textarea class="textarea" id="add_order_addtext" rows="5" name="addtext" placeholder="Если доставка не срочная - укажите здесь число, время и место! И напишите любые ваши пожелания."></textarea>
+					<input id="chb" class="checkbox" type="checkbox" name="option2" value="Согласие есть">Согласие на обработку персональных данных<br>
+					<div id="orderButton" class="head2-but">
+						<button type="submit" class="button" onClick="goOrder();">ПОДТВЕРДИТЬ</button>
+					</div>
+				</form>	
+			</div>
+		</div>
+		
+		<div id="4" class="dostavka">
+			<div class="title-b">Доставка</div>
+			<div class="box3">
+				<div class="text3">
+					В пределах Первомайскогоь района доставка 200 рублейю <br> <br>
+					А при заказе от 2000 рублей - БЕСПЛАТНО! <br> <br>
+					ferma@mail.ru <br> <br>
+					Время работы: ПН-ПТ 9-18, СБ-ВС 9-15
+				</div>
+			</div>
+		</div>
+		
+		<div id="5" class="otziv">
+			<div class="title-b">Отзывы</div>
+			<div class="box2">
+				<iframe width="345" height="195" src="https://www.youtube.com/embed/Vj11S4w8Rvg?si=Eq6zNNL96L0pINve"></iframe>
+				<div class="text2">Посмотрите видео-рецензию на наши продукты. Оценивает Денис Шмальц - видеоблогер</div>
+			</div>
+		</div>
+		
+		<div id="6" class="contact">
+			<div class="container">
+				<div class="title-b">Контакты</div>
+				
+				<div class="con-con">
+					<div class="cons">
+						<img class="con-img" src="image/slava.jpg" alt="">
+						<div class="con-box">
+							<div class="con-name">Вячеслав Машнов</div>
+							<div class="con-work">Управляющий "Ферма носков"</div>
+							<button class="con-button" alt="" >НАПИСАТЬ</button>
+						</div>
+					</div>
+					<div class="cons">
+						<img class="con-img" src="image/zamay.jpg" alt="">
+						<div class="con-box">
+							<div class="con-name">Андрей Замай</div>
+							<div class="con-work">Маркетолог</div>
+							<button class="con-button" alt="" >НАПИСАТЬ</button>
+						</div>
+					</div>
+					<div class="cons">
+						<img class="con-img" src="image/sd.jpg" alt="">
+						<div class="con-box">
+							<div class="con-name">Виктор Гевиксман</div>
+							<div class="con-work">Сотрудник колл-центра</div>
+							<button class="con-button" alt="" >НАПИСАТЬ</button>
+						</div>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		
+	<div class="basement">
+		<div class="container">
+			<div class="bas">
+					<div class="bas-text"><br>©Ferma, Виктор Кушка, ИС-4-1, 2024</div>
+				
+				<div class="bas-holder">
+					<div class="bas-title">Компания</div>
+					<br>
+					<div class="bas-desk">
+						<a class="bas-item" href="#1">О компании</a>
+					</div>
+					<div class="bas-desk">
+						<a class="bas-item" href="#4">Доставка</a>
+					</div>
+					<div class="bas-desk">
+						<a class="bas-item" href="#6">Контакты</a>
+					</div>
+				</div>
+				
+				<div class="bas-holder">
+					<div class="bas-title">Клиентам</div>
+					<br>
+					<div class="bas-desk">
+						<a class="bas-item" href="#2">Продукция</a>
+					</div>
+					<div class="bas-desk">
+						<a class="bas-item" href="#5">Отзывы</a>
+					</div>
+				</div>
+				
+				<div class="bas-holder">
+					<div class="bas-title">Помощь</div>
+					<br>
+					<div class="bas-desk">
+						<a class="bas-item" href="#3">Как оформить заказ</a>
+					</div>
+					<div class="bas-item">Подберем вам пару</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</body>
+</html>

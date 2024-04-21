@@ -12,7 +12,7 @@ $mestext="Имя: ".$fullname.
 		 "\nЧисло и пожелания: ".$addtext;
 
 if(isset($fullname) && isset($email) && isset($phone) && isset($delivery)) {
-	if(mail("stayseena@mail.ru", 'Заказ на сайте', $mestext)) { $result = 1; }
+	if(mail("Tapochek2002sun@gmail.com", 'Заказ на сайте', $mestext)) { $result = 1; }
 	else { $result = 3; }
 }
 else { $result = 2; }
